@@ -1,8 +1,8 @@
 {
 	"name": "ultimate-tic-tac-toe",
 	"version": "0.1.0",
-	"description": "Play ultimate tic tac toe online with a friend or against the computer. Features a lighting fast artificial intelligence. Supports gameplay on multiple devices.",
-	"author": "Bennett Zhang <bennett.d.zhang@gmail.com>",
+	"description": "Jogue o Ultimate Tic Tac Toe com um amigo ou contra o computador. Possui uma inteligência artificial rápida. Suporta a jogabilidade em vários dispositivos.",
+	"author": "Los Hermanos",
 	"engines": {
 		"node": "6.9.1"
 	},
@@ -17,7 +17,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/bennett-zhang/ultimate-t3"
+		"url": "https://github.com/kyo1506/ultimate-tic-tac-toe"
 	},
 	"keywords": [
 		"ultimate",

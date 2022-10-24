@@ -17,46 +17,46 @@
 						<div class="panel-body">
 							<form>
 								<div class="form-group">
-									<label for="opponent">Opponent</label>
+									<label for="opponent">Oponente</label>
 									<select id="opponent" class="form-control">
-										<option value="computer">Play against computer</option>
-										<option value="friend">Play with friend</option>
+										<option value="computer">Jogar contra a IA</option>
+										<option value="friend">Jogar contra um amigo</option>
 									</select>
 								</div>
 								<div class="form-group">
-									<label for="first">Who goes first</label>
+									<label for="first">Quem vai primeiro</label>
 									<select id="first" class="form-control">
-										<option value="player">Player</option>
-										<option value="computer">Computer</option>
+										<option value="player">Jogador</option>
+										<option value="computer">Computador</option>
 									</select>
 								</div>
 								<div class="form-group">
-									<label for="difficulty">Difficulty</label>
+									<label for="difficulty">Dificuldade</label>
 									<select id="difficulty" class="form-control">
-										<option value="1">Piece of cake</option>
-										<option value="2" selected>Medium</option>
-										<option value="3">Hard</option>
-										<option value="4">Very hard</option>
-										<option value="5">Extremely hard</option>
+										<option value="1">Muito fácil</option>
+										<option value="2" selected>Médio</option>
+										<option value="3">Difícil</option>
+										<option value="4">Muito Difícil</option>
+										<option value="5">Extremamente Difícil</option>
 										<option value="6">Expert</option>
-										<option value="7">Grandmaster</option>
-										<option value="8">Impossible</option>
+										<option value="7">Ancião</option>
+										<option value="8">Chuck Norris</option>
 									</select>
 								</div>
-								<button type="button" id="new-game" class="btn btn-primary">New game</button>
+								<button type="button" id="new-game" class="btn btn-primary">Novo Jogo</button>
 							</form>
 						</div>
 					</div>
 					<div class="panel panel-default hidden-xs hidden-sm">
 						<div class="panel-heading">
-							<h2 class="panel-title">History</h2>
+							<h2 class="panel-title">Histórico</h2>
 						</div>
 						<table id="history-table" class="table">
 							<thead>
 								<tr>
-									<th scope="col">Turn</th>
-									<th scope="col">Player</th>
-									<th scope="col">Location</th>
+									<th scope="col">Turno</th>
+									<th scope="col">Jogador</th>
+									<th scope="col">Localização</th>
 								</tr>
 							</thead>
 							<tbody></tbody>
@@ -66,7 +66,7 @@
 				<div class="col-md-8 col-md-pull-4">
 					<div class="panel panel-default">
 						<div class="panel-heading">
-							<h1 id="game-caption" class="panel-title">Game not yet started</h1>
+							<h1 id="game-caption" class="panel-title">Jogo não foi niciado</h1>
 						</div>
 						<div class="panel-body">
 							<div id="game" class="disabled"></div>
