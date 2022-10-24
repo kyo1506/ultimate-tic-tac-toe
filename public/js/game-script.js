@@ -435,7 +435,7 @@ BigBoardDisplay.prototype.update = function() {
 		this.element.removeClass("enabled").addClass("disabled");
 		var winner = game.bigBoard.winner;
 		if (winner === "tie") {
-			gameCaption.text("It's a tie!");
+			gameCaption.text("Deu velha!");
 		}
 		else {
 			gameCaption.text(winner + " ganhou!");
@@ -661,7 +661,7 @@ if (online) {
 	socket.on("someone disconnected", function(room) {
 		if (room.game.players.length < 2) {
 			connectionStatus.removeClass("alert-success").addClass("alert-danger");
-			connectionStatus.text(room.game.players.length === 1 ? "One of the players has left" : "Both of the players have left");
+			connectionStatus.text(room.game.players.length === 1 ? "Um dos jogadores saiu" : "Ambos os jogadores sairam");
 		}
 	});
 
