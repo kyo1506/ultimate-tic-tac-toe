@@ -438,12 +438,12 @@ BigBoardDisplay.prototype.update = function() {
 			gameCaption.text("It's a tie!");
 		}
 		else {
-			gameCaption.text(winner + " wins!");
+			gameCaption.text(winner + " ganhou!");
 		}
 	}
 	else {
 		this.element.removeClass("disabled").addClass("enabled");
-		gameCaption.text(game.playerWhoseTurnItIs + "'s turn");
+		gameCaption.text("Turno de " + game.playerWhoseTurnItIs);
 		var canMove = false;
 		for (var i = 0; i < players.length; i++) {
 			if (players[i] === game.playerWhoseTurnItIs) {
@@ -452,10 +452,10 @@ BigBoardDisplay.prototype.update = function() {
 			}
 		}
 		if (players.length === 0) {
-			gameCaption.append(" <span class='text-muted'>(you are spectating)</span>");
+			gameCaption.append(" <span class='text-muted'>(você está assistindo)</span>");
 		}
 		else if (!canMove) {
-			gameCaption.append(" <span class='text-muted'>(waiting for opponent...)</span>");
+			gameCaption.append(" <span class='text-muted'>(aguardando oponente...)</span>");
 		}
 		var history = game.history;
 		var turn = history.length;
@@ -591,12 +591,12 @@ newGame.click(function() {
 		if (first.val() === "player") {
 			players = ["X"];
 			aiPlayer = "O";
-			playerDisplay.text("You are playing as X");
+			playerDisplay.text("Você está jogando como X");
 		}
 		else {
 			players = ["O"];
 			aiPlayer = "X";
-			playerDisplay.text("You are playing as O");
+			playerDisplay.text("Você está jogando como O");
 		}
 		playerDisplay.show(500);
 		game = new Game(aiPlayer, parseInt(difficulty.val()));
@@ -633,10 +633,10 @@ if (online) {
 	socket.on("connection", function(player, room) {
 		if (player) {
 			players = [player];
-			playerDisplay.text("You are playing as " + player);
+			playerDisplay.text("Você está jogando como " + player);
 		}
 		else {
-			playerDisplay.text("You are spectating");
+			playerDisplay.text("Você está assistindo");
 		}
 		playerDisplay.show(500);
 		if (room.game.players.length === 1) {
@@ -652,7 +652,7 @@ if (online) {
 	socket.on("someone connected", function(room) {
 		if (room.game.players.length === 2) {
 			connectionStatus.removeClass("alert-danger").addClass("alert-success");
-			connectionStatus.text("Both players have joined");
+			connectionStatus.text("Ambos os jogadores conectaram");
 			connectionStatus.show(500);
 			url.closest("form").hide(500);
 		}
